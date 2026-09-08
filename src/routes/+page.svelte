@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>SIAAPI — Portal Institucional de Investigación</title>
+	<title>SIAAPI — Sistema de Información de Áreas Académicas y Proyectos de Investigación CBI</title>
 </svelte:head>
 
 <Card accentLeft={true} padding="lg">

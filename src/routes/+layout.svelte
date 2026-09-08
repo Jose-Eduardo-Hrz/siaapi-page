@@ -30,7 +30,8 @@
 	$effect(() => {
 		const currentPath = page.url.pathname;
 		for (const depto of data.departamentos) {
-			if (depto.areas.some((area) => area.href === currentPath)) {
+
+			if (depto.areas.some((area) => asset(area.href) === currentPath)) {
 				openDeptos[depto.id] = true;
 			}
 		}
@@ -51,7 +52,7 @@
 	<Card variant="flat" padding="lg">
 		<Header
 			topLabel="UAM AZCAPOTZALCO · DIVISIÓN DE CIENCIAS BÁSICAS E INGENIERÍA"
-			titlePrefix="Sistema de Información para la Administración de Proyectos de Investigación"
+			titlePrefix="Sistema de Información de Áreas Académicas y Proyectos de Investigación CBI"
 			acronym="(SIAAPI)"
 			titleSuffix=""
 		/>
@@ -72,7 +73,7 @@
 			<NavItem
 				label="Inicio"
 				href={asset("/")}
-				active={asset(page.url.pathname) === asset("/")}
+				active={page.url.pathname === asset("/")}
 			/>
 
 			<!-- 2. DEPARTAMENTOS ACADÉMICOS (TÍTULO DE SECCIÓN ESTÁTICO) -->
@@ -95,7 +96,7 @@
 								label={capitalizarPrimerLetra(area.nombre)}
 								href={asset(area.href)}
 								indent={true}
-								active={asset(page.url.pathname) === asset(area.href)}
+								active={page.url.pathname === asset(area.href)}
 							/>
 						{/each}
 					</NavGroup>
@@ -106,8 +107,8 @@
 
 			<!-- 4. CONSULTA INSTITUCIONAL -->
 			<NavItem
-				label="Consulta institucional"
-				href="/consulta-institucional"
+				label="Consejo Divisional CBI"
+				href="https://consejodivcbi.azc.uam.mx/"
 				showDot={true}
 				active={(page.url.pathname as string) ===
 					"/consulta-institucional"}
