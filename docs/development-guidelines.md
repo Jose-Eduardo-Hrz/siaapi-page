@@ -1,0 +1,10 @@
+- Antes de crear un componente, revisar si ya existe uno reutilizable.
+- No duplicar componentes.
+- No utilizar colores hardcodeados.
+- Utilizar Design Tokens.
+- No modificar tokens para resolver problemas específicos de una página.
+- Utilizar TypeScript.
+- Mantener componentes pequeños.
+- No modificar lógica de negocio al realizar cambios visuales.
+- No instalar dependencias sin justificación.
+- Mantener la estructura existente del proyecto.

@@ -1,0 +1,520 @@
+/*
+
+* SIAAPI — Design Tokens
+*
+* Fuente de verdad:
+* docs/design-tokens.md
+*
+* Este archivo contiene exclusivamente Design Tokens.
+* No agregar estilos específicos de componentes aquí.
+*
+* Estados:
+* CONFIRMED  → valor confirmado.
+* PROVISIONAL → valor temporal sujeto a validación.
+* TODO → pendiente de definición.
+  */
+
+/* ============================================================
+ROOT
+============================================================ */
+
+:root {
+
+    /* ========================================================
+   1. COLORS — BRAND
+   ======================================================== */
+
+    /*
+ * Color institucional principal.
+ *
+ * Estado: PROVISIONAL
+ */
+    --color-primary: #B21E27;
+
+    /*
+ * Estados derivados del color primario.
+ *
+ * Estado: PROVISIONAL
+ */
+    --color-primary-hover: #951A22;
+    --color-primary-active: #82171E;
+
+    /*
+ * Texto utilizado sobre superficies primarias.
+ *
+ * Estado: CONFIRMED
+ */
+    --color-text-on-primary: #FFFFFF;
+
+
+    /* ========================================================
+   2. COLORS — BACKGROUND & SURFACE
+   ======================================================== */
+
+    /*
+ * Fondo general de la aplicación.
+ *
+ * Estado: PROVISIONAL
+ */
+    --color-background: #F8FAFC;
+
+    /*
+ * Fondo principal de tarjetas, paneles y contenedores.
+ *
+ * Estado: CONFIRMED
+ */
+    --color-surface: #FFFFFF;
+
+    /*
+ * Superficie secundaria.
+ *
+ * Estado: PROVISIONAL
+ */
+    --color-surface-secondary: #F3F4F6;
+
+    /*
+ * Fondo utilizado para elementos seleccionados,
+ * navegación activa y callouts.
+ *
+ * Estado: PROVISIONAL
+ */
+    --color-selection-background: #FDF0F0;
+
+
+    /* ========================================================
+   2.1. COLORS — STATUS
+   ======================================================== */
+
+    /*
+ * Colores para distintivos de estado (badges).
+ *
+ * Estado: PROVISIONAL
+ */
+    --color-status-active-bg: #E6F4EA;
+    --color-status-active-text: #137333;
+    --color-status-inactive-bg: #F3F4F6;
+    --color-status-inactive-text: #6B7280;
+
+
+    /* ========================================================
+   3. COLORS — TEXT
+   ======================================================== */
+
+    /*
+ * Texto principal.
+ *
+ * Estado: PROVISIONAL
+ */
+    --color-text: #1F2937;
+
+    /*
+ * Texto secundario.
+ *
+ * Estado: PROVISIONAL
+ */
+    --color-text-secondary: #6B7280;
+
+    /*
+ * Texto de baja prioridad visual.
+ *
+ * Estado: PROVISIONAL
+ */
+    --color-text-muted: #9CA3AF;
+
+
+    /* ========================================================
+   4. COLORS — BORDERS
+   ======================================================== */
+
+    /*
+ * Borde general.
+ *
+ * Estado: PROVISIONAL
+ */
+    --color-border: #E5E7EB;
+
+    /*
+ * Separadores y bordes muy sutiles.
+ *
+ * Estado: PROVISIONAL
+ */
+    --color-border-subtle: #EAECF0;
+
+    /*
+ * Borde institucional de acento.
+ *
+ * Estado: PROVISIONAL
+ */
+    --color-border-primary: #B21E27;
+
+
+    /* ========================================================
+   5. TYPOGRAPHY — FAMILY
+   ======================================================== */
+
+    /*
+ * Familia tipográfica principal.
+ *
+ * Estado: PROVISIONAL
+ *
+ * La fuente definitiva todavía debe confirmarse.
+ */
+    --font-family-base: "Inter", sans-serif;
+
+
+    /* ========================================================
+   6. TYPOGRAPHY — SIZE
+   ======================================================== */
+
+    /*
+ * Labels y textos muy pequeños.
+ *
+ * Estado: PROVISIONAL
+ */
+    --font-size-xs: 0.75rem;
+    /* 12px */
+
+    /*
+ * Navegación y texto secundario.
+ *
+ * Estado: PROVISIONAL
+ */
+    --font-size-sm: 0.875rem;
+    /* 14px */
+
+    /*
+ * Texto base.
+ *
+ * Estado: CONFIRMED
+ */
+    --font-size-md: 1rem;
+    /* 16px */
+
+    /*
+ * Subtítulos.
+ *
+ * Estado: PROVISIONAL
+ */
+    --font-size-lg: 1.125rem;
+    /* 18px */
+
+    /*
+ * Títulos de sección.
+ *
+ * Estado: PROVISIONAL
+ */
+    --font-size-xl: 1.25rem;
+    /* 20px */
+
+    /*
+ * Títulos principales.
+ *
+ * Estado: PROVISIONAL
+ */
+    --font-size-2xl: 1.5rem;
+    /* 24px */
+
+    /*
+ * Título principal de aplicación.
+ *
+ * Estado: PROVISIONAL
+ */
+    --font-size-3xl: 1.75rem;
+    /* 28px */
+
+
+    /* ========================================================
+   7. TYPOGRAPHY — WEIGHT
+   ======================================================== */
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+
+    /* ========================================================
+   8. TYPOGRAPHY — LINE HEIGHT
+   ======================================================== */
+
+    /*
+ * Títulos.
+ */
+    --line-height-tight: 1.25;
+
+    /*
+ * Texto general.
+ */
+    --line-height-normal: 1.5;
+
+    /*
+ * Texto de lectura y párrafos.
+ */
+    --line-height-relaxed: 1.6;
+
+
+    /* ========================================================
+   9. SPACING
+   ======================================================== */
+
+    /*
+ * Escala basada principalmente en múltiplos de 4px.
+ */
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+
+
+    /* ========================================================
+   10. BORDER RADIUS
+   ======================================================== */
+
+    /*
+ * Inputs y botones.
+ */
+    --radius-sm: 6px;
+
+    /*
+ * Callouts y tarjetas pequeñas.
+ */
+    --radius-md: 8px;
+
+    /*
+ * Componentes principales.
+ */
+    --radius-lg: 12px;
+
+    /*
+ * Sidebar y panel principal.
+ */
+    --radius-xl: 16px;
+
+    /*
+ * Elementos completamente redondeados.
+ */
+    --radius-full: 9999px;
+
+
+    /* ========================================================
+   11. BORDER WIDTH
+   ======================================================== */
+
+    /*
+ * Bordes generales.
+ */
+    --border-width-thin: 1px;
+
+    /*
+ * Bordes laterales de acento institucional.
+ */
+    --border-width-accent: 4px;
+
+
+    /* ========================================================
+   12. SHADOWS
+   ======================================================== */
+
+    /*
+ * Sin sombra.
+ */
+    --shadow-none: none;
+
+    /*
+ * Sombra ligera para tarjetas y paneles.
+ *
+ * Estado: PROVISIONAL
+ */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    /*
+ * Sombra muy tenue para contenedores principales.
+ *
+ * Estado: PROVISIONAL
+ */
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.03);
+
+
+    /* ========================================================
+   13. LAYOUT
+   ======================================================== */
+
+    /*
+ * Ancho objetivo del Sidebar.
+ *
+ * Estado: PROVISIONAL
+ */
+    --sidebar-width: 300px;
+
+    /*
+ * Ancho mínimo del Sidebar.
+ *
+ * Estado: PROVISIONAL
+ */
+    --sidebar-min-width: 280px;
+
+    /*
+ * Ancho máximo del Sidebar.
+ *
+ * Estado: PROVISIONAL
+ */
+    --sidebar-max-width: 320px;
+
+    /*
+ * Separación entre Sidebar y contenido.
+ *
+ * Estado: PROVISIONAL
+ */
+    --layout-gap: 24px;
+
+    /*
+ * Padding principal de los contenedores.
+ *
+ * Estado: PROVISIONAL
+ */
+    --container-padding: 32px;
+
+    /*
+ * Padding para dispositivos móviles.
+ *
+ * Estado: PROVISIONAL
+ */
+    --container-padding-mobile: 16px;
+
+
+    /* ========================================================
+   14. FORM CONTROLS
+   ======================================================== */
+
+    /*
+ * Altura estándar de inputs.
+ *
+ * Estado: PROVISIONAL
+ */
+    --input-height: 40px;
+
+    /*
+ * Padding horizontal del input.
+ *
+ * Estado: PROVISIONAL
+ */
+    --input-padding-x: 12px;
+
+    /*
+ * Padding vertical del input.
+ *
+ * Estado: PROVISIONAL
+ */
+    --input-padding-y: 8px;
+
+
+    /* ========================================================
+   15. BUTTONS
+   ======================================================== */
+
+    /*
+ * Altura estándar del botón.
+ *
+ * Estado: PROVISIONAL
+ */
+    --button-height: 40px;
+
+    /*
+ * Padding horizontal del botón.
+ *
+ * Estado: PROVISIONAL
+ */
+    --button-padding-x: 16px;
+
+    /*
+ * Padding vertical del botón.
+ *
+ * Estado: PROVISIONAL
+ */
+    --button-padding-y: 8px;
+
+
+    /* ========================================================
+   16. NAVIGATION
+   ======================================================== */
+
+    /*
+ * Altura de los elementos del menú.
+ *
+ * Estado: PROVISIONAL
+ */
+    --nav-item-height: 40px;
+
+    /*
+ * Padding horizontal de los elementos del menú.
+ *
+ * Estado: PROVISIONAL
+ */
+    --nav-item-padding-x: 16px;
+
+    /*
+ * Padding vertical de los elementos del menú.
+ *
+ * Estado: PROVISIONAL
+ */
+    --nav-item-padding-y: 8px;
+
+
+    /* ========================================================
+   17. ACCENT
+   ======================================================== */
+
+    /*
+ * Ancho del borde rojo utilizado como acento
+ * en CalloutBanner y otros componentes.
+ */
+    --accent-border-width: 4px;
+
+
+    /* ========================================================
+   18. BREAKPOINTS
+   ======================================================== */
+
+    /*
+ * Valores provisionales.
+ *
+ * Nota:
+ * Las CSS Custom Properties no pueden utilizarse
+ * directamente dentro de @media en todos los casos.
+ *
+ * Estos valores se mantienen aquí como documentación
+ * centralizada del sistema.
+ */
+
+    --breakpoint-mobile: 640px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+    --breakpoint-wide: 1280px;
+
+}
+
+/* ============================================================
+GLOBAL BASE
+============================================================ */
+
+/*
+
+* La sección anterior contiene únicamente tokens.
+*
+* No agregar aquí:
+*
+* * estilos de componentes
+* * estilos de páginas
+* * clases utilitarias
+* * estilos de navegación
+* * estilos de botones
+*
+* Esos estilos deben vivir en global.css o en los
+* componentes Svelte correspondientes.
+  */
