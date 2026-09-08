@@ -71,7 +71,7 @@
 			<!-- 1. INICIO (ENLACE A /) -->
 			<NavItem
 				label="Inicio"
-				href="/"
+				href={asset("/")}
 				active={asset(page.url.pathname) === asset("/")}
 			/>
 
