@@ -20,7 +20,7 @@
 	let { project, selected = false, class: className = "" }: Props = $props();
 </script>
 
-<div class="project-card {className}" class:selected>
+<div class="project-card {className}" class:selected on:click={() => project.href && (window.location.href = project.href)}>
 	<!-- Top Bar -->
 	<div class="card-header">
 		<div class="project-type-tag">
@@ -40,7 +40,7 @@
 				<path d="M8.5 2h7" />
 				<path d="M7 16h10" />
 			</svg>
-			<span class="type-label">PROYECTO</span>
+			<span class="type-label">{project.clave}</span>
 		</div>
 		<StatusBadge status={project.estado} />
 	</div>
@@ -57,7 +57,6 @@
 	<!-- Footer Info -->
 	<div class="card-footer">
 		<div class="meta-info">
-			<span>Clave: {project.clave} &nbsp;|&nbsp;</span>
 			<span>Acuerdo: {project.acuerdo}</span>
 		</div>
 		<a href={project.href || "#"} class="action-link">

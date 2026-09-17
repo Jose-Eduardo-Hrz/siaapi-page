@@ -1,5 +1,12 @@
 import type { RowDataPacket } from 'mysql2';
 
+export interface BusquedaAreaRow extends RowDataPacket {
+    id: number;
+    nombre: string;
+    departamento: string;
+    responsable: string | null;
+}
+
 export interface BusquedaProyectoRow extends RowDataPacket {
     id: number;
     nombre: string;

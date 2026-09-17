@@ -11,6 +11,7 @@
 		NavGroup,
 		NavItem,
 	} from "$lib";
+	import Footer from "$lib/components/Footer.svelte";
 	import { page } from "$app/state";
 	import type { LayoutProps } from "./$types";
 	import { goto } from "$app/navigation";
@@ -30,7 +31,6 @@
 	$effect(() => {
 		const currentPath = page.url.pathname;
 		for (const depto of data.departamentos) {
-
 			if (depto.areas.some((area) => asset(area.href) === currentPath)) {
 				openDeptos[depto.id] = true;
 			}
@@ -83,7 +83,8 @@
 					{@const isDeptoActive =
 						openDeptos[depto.id] ||
 						depto.areas.some(
-							(area) => asset(page.url.pathname) === asset(area.href),
+							(area) =>
+								asset(page.url.pathname) === asset(area.href),
 						)}
 					<NavGroup
 						title={capitalizarPrimerLetra(depto.nombre)}
@@ -120,6 +121,7 @@
 <AppShell header={headerSnippet} sidebar={sidebarSnippet}>
 	{@render children()}
 </AppShell>
+<Footer />
 
 <style>
 	.nav-section {

@@ -3,7 +3,10 @@
 </script>
 
 <svelte:head>
-	<title>SIAAPI — Sistema de Información de Áreas Académicas y Proyectos de Investigación CBI</title>
+	<title
+		>SIAAPI — Sistema de Información de Áreas Académicas y Proyectos de
+		Investigación CBI</title
+	>
 </svelte:head>
 
 <Card accentLeft={true} padding="lg">
@@ -20,35 +23,36 @@
 		<p>
 			El Sistema de Información para la Administración de Proyectos de
 			Investigación es la evolución del sistema de información de áreas
-			académicas y proyectos de investigación. Las presentes modificaciones
-			obedecen a la reforma relacionada con la organización básica de las
-			funciones sustantivas y la carrera académica en la Universidad, aprobadas
-			por el Colegio Académico en la sesión 522, celebrada el 10 de marzo y
-			17 de abril de 2023, al Reglamento Orgánico (RO).
+			académicas y proyectos de investigación. Las presentes
+			modificaciones obedecen a la reforma relacionada con la organización
+			básica de las funciones sustantivas y la carrera académica en la
+			Universidad, aprobadas por el Colegio Académico en la sesión 522,
+			celebrada el 10 de marzo y 17 de abril de 2023, al Reglamento
+			Orgánico (RO).
 		</p>
 
 		<p>
 			Con el propósito de atender las problemáticas expuestas, en esta
-			reforma se modifica el artículo 3 para precisar que la división y los
-			departamentos les corresponden el desarrollo de las tres funciones y se
-			da una nueva definición al área, llamándola
-			<strong class="highlight-red">área académica</strong>, en cuyo seno se
-			deberán atender la docencia, la investigación y la preservación y
+			reforma se modifica el artículo 3 para precisar que la división y
+			los departamentos les corresponden el desarrollo de las tres
+			funciones y se da una nueva definición al área, llamándola
+			<strong class="highlight-red">área académica</strong>, en cuyo seno
+			se deberán atender la docencia, la investigación y la preservación y
 			difusión de la cultura.
 		</p>
 
 		<p>
 			Además, se indica que este espacio organizativo puede integrarse por
-			personal académico de uno o varios departamentos y divisiones, lo que
-			posibilita la interdisciplinariedad y un enfoque transdisciplinario en la
-			atención de las actividades académicas. Con esta reforma se pretende que
-			la planeación académica se apruebe en los órganos colegiados,
-			fortalecida por el trabajo colectivo de las áreas académicas, al ser
-			armonizada y regulada en los departamentos, las divisiones, así como en
-			las unidades y a nivel institucional.
+			personal académico de uno o varios departamentos y divisiones, lo
+			que posibilita la interdisciplinariedad y un enfoque
+			transdisciplinario en la atención de las actividades académicas. Con
+			esta reforma se pretende que la planeación académica se apruebe en
+			los órganos colegiados, fortalecida por el trabajo colectivo de las
+			áreas académicas, al ser armonizada y regulada en los departamentos,
+			las divisiones, así como en las unidades y a nivel institucional.
 		</p>
 
-		<div class="callout-wrapper">
+		<!-- <div class="callout-wrapper">
 			<CalloutBanner>
 				<div class="callout-inner">
 					<strong class="callout-title">Consulta el catálogo académico</strong>
@@ -58,7 +62,7 @@
 					</p>
 				</div>
 			</CalloutBanner>
-		</div>
+		</div> -->
 	</article>
 </Card>
 

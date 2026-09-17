@@ -1,9 +1,18 @@
 <script lang="ts">
     import type { PageData } from "./$types";
     import { Card, StatusBadge } from "$lib";
-    import { capitalizarPrimerLetra , capitalizarPrimerLetraConLimite , capitalizarCadaPalabras} from "$lib/funciones/utils";
+    import {
+        capitalizarPrimerLetra,
+        capitalizarPrimerLetraConLimite,
+        capitalizarCadaPalabras,
+    } from "$lib/funciones/utils";
 
     let { data }: { data: PageData } = $props();
+
+    const INITIAL_LIMIT = 3;
+    let showAllAreas = $state(false);
+    let showAllPias = $state(false);
+    let showAllProyectos = $state(false);
 </script>
 
 <svelte:head>
@@ -21,7 +30,71 @@
         </div>
     </Card>
 
-    <!-- Sección 1: Programas Académicos -->
+    <!-- Sección 1: Areas Académicas -->
+    <Card accentLeft={true} padding="none">
+        <div class="card-section-header">
+            <div class="section-title-wrapper">
+                <svg
+                    class="section-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                    <path
+                        d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                    />
+                </svg>
+                <h2 class="section-title-text">Áreas Académicas</h2>
+            </div>
+            <span class="count-badge">{data.areas.length}</span>
+        </div>
+
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Departamento</th>
+                        <th>Responsable</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {#each showAllAreas ? data.areas : data.areas.slice(0, INITIAL_LIMIT) as area (area.id)}
+                        <tr>
+                            <td class="col-program-name"
+                                >{capitalizarPrimerLetra(area.nombre)}</td
+                            >
+                            <td>{capitalizarPrimerLetra(area.departamento)}</td>
+                            <td
+                                >{capitalizarPrimerLetra(
+                                    area.responsable ? area.responsable : "",
+                                )}</td
+                            >
+                        </tr>
+                    {/each}
+                </tbody>
+            </table>
+        </div>
+        {#if data.areas.length > INITIAL_LIMIT}
+            <div class="show-more-wrapper">
+                <button
+                    class="show-more-btn"
+                    onclick={() => (showAllAreas = !showAllAreas)}
+                >
+                    {showAllAreas
+                        ? "Ver menos"
+                        : `Ver más (${data.areas.length - INITIAL_LIMIT} restantes)`}
+                </button>
+            </div>
+        {/if}
+    </Card>
+
+    <!-- Sección 2: Programas Académicos -->
     <Card accentLeft={true} padding="none">
         <div class="card-section-header">
             <div class="section-title-wrapper">
@@ -55,19 +128,37 @@
                 </thead>
 
                 <tbody>
-                    {#each data.pias as programa (programa.id)}
+                    {#each showAllPias ? data.pias : data.pias.slice(0, INITIAL_LIMIT) as programa (programa.id)}
                         <tr>
-                            <td class="col-program-name">{capitalizarPrimerLetraConLimite(programa.nombre)}</td>
+                            <td class="col-program-name"
+                                >{capitalizarPrimerLetra(programa.nombre)}</td
+                            >
                             <td>{capitalizarPrimerLetra(programa.area)}</td>
-                            <td>{capitalizarPrimerLetra(programa.departamento)}</td>
+                            <td
+                                >{capitalizarPrimerLetra(
+                                    programa.departamento,
+                                )}</td
+                            >
                         </tr>
                     {/each}
                 </tbody>
             </table>
         </div>
+        {#if data.pias.length > INITIAL_LIMIT}
+            <div class="show-more-wrapper">
+                <button
+                    class="show-more-btn"
+                    onclick={() => (showAllPias = !showAllPias)}
+                >
+                    {showAllPias
+                        ? "Ver menos"
+                        : `Ver más (${data.pias.length - INITIAL_LIMIT} restantes)`}
+                </button>
+            </div>
+        {/if}
     </Card>
 
-    <!-- Sección 2: Proyectos Académicos -->
+    <!-- Sección 3: Proyectos Académicos -->
     <Card accentLeft={true} padding="none">
         <div class="card-section-header">
             <div class="section-title-wrapper">
@@ -101,12 +192,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {#each data.proyectos as proyecto (proyecto.clave)}
+                    {#each showAllProyectos ? data.proyectos : data.proyectos.slice(0, INITIAL_LIMIT) as proyecto (proyecto.clave)}
                         <tr>
                             <td class="col-clave">{proyecto.clave}</td>
-                            <td class="col-project-name">{capitalizarPrimerLetraConLimite(proyecto.nombre)}</td>
+                            <td class="col-project-name"
+                                >{capitalizarPrimerLetra(proyecto.nombre)}</td
+                            >
                             <td>{proyecto.acuerdo}</td>
-                            <td>{capitalizarCadaPalabras(proyecto.responsable)}</td>
+                            <td
+                                >{capitalizarCadaPalabras(
+                                    proyecto.responsable,
+                                )}</td
+                            >
                             <td>{capitalizarPrimerLetra(proyecto.pia)}</td>
                             <td>
                                 <StatusBadge status={proyecto.estado} />
@@ -116,6 +213,18 @@
                 </tbody>
             </table>
         </div>
+        {#if data.proyectos.length > INITIAL_LIMIT}
+            <div class="show-more-wrapper">
+                <button
+                    class="show-more-btn"
+                    onclick={() => (showAllProyectos = !showAllProyectos)}
+                >
+                    {showAllProyectos
+                        ? "Ver menos"
+                        : `Ver más (${data.proyectos.length - INITIAL_LIMIT} restantes)`}
+                </button>
+            </div>
+        {/if}
     </Card>
 </div>
 
@@ -252,5 +361,32 @@
         .data-table td {
             padding: var(--space-2) var(--space-3);
         }
+    }
+
+    .show-more-wrapper {
+        display: flex;
+        justify-content: center;
+        padding: var(--space-3) var(--space-6);
+        border-top: var(--border-width-thin) solid var(--color-border-subtle);
+    }
+
+    .show-more-btn {
+        font-family: var(--font-family-base);
+        font-size: var(--font-size-xs);
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-primary);
+        background: none;
+        border: var(--border-width-thin) solid var(--color-primary);
+        border-radius: var(--radius-sm);
+        padding: var(--space-2) var(--space-4);
+        cursor: pointer;
+        transition:
+            background-color 0.15s ease,
+            color 0.15s ease;
+    }
+
+    .show-more-btn:hover {
+        background-color: var(--color-primary);
+        color: var(--color-text-on-primary);
     }
 </style>

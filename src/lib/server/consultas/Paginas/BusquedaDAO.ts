@@ -1,5 +1,5 @@
 import { pool } from '$lib/server/db';
-import type { BusquedaPIAsRow , BusquedaProyectoRow} from '$lib/types/Paginas/Busqueda';
+import type { BusquedaPIAsRow, BusquedaProyectoRow, BusquedaAreaRow } from '$lib/types/Paginas/Busqueda';
 
 export const BusquedaDAO = {
 
@@ -17,6 +17,13 @@ export const BusquedaDAO = {
             WHERE nombre LIKE ? 
             OR clave LIKE ?;`, [searchQuery, searchQuery]);
         return proyectos;
+    },
+
+    async getAreas(query: string): Promise<BusquedaAreaRow[]> {
+        const searchQuery = `%${query}%`;
+        const [areas] = await pool.query<BusquedaAreaRow[]>(`
+            SELECT * FROM siaapi_busqueda_area where nombre LIKE ?;`, [searchQuery, searchQuery]);
+        return areas;
     },
 
 }
