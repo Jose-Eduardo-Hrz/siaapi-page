@@ -14,7 +14,7 @@ export interface PaginaProyectoRow extends RowDataPacket {
     fecha_prorroga: Date | null;
     objetivos: string;
     responsable: string;
-    participantes: ParticipanteRow[];
+    participantes: ParticipanteRow[] | null;
     id_pia: number;
     nombre_pia: string;
     id_area: number;
