@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Card, SectionTitle, CalloutBanner } from "$lib";
+	import { Card, SectionTitle, CalloutBanner, HeroBanner } from "$lib";
 </script>
 
 <svelte:head>
@@ -8,6 +8,10 @@
 		Investigación CBI</title
 	>
 </svelte:head>
+
+<HeroBanner subtitle="" />
+
+<div class="hero-spacer"></div>
 
 <Card accentLeft={true} padding="lg">
 	<div class="content-header">
@@ -21,35 +25,19 @@
 
 	<article class="content-body">
 		<p>
-			El Sistema de Información para la Administración de Proyectos de
-			Investigación es la evolución del sistema de información de áreas
-			académicas y proyectos de investigación. Las presentes
-			modificaciones obedecen a la reforma relacionada con la organización
-			básica de las funciones sustantivas y la carrera académica en la
-			Universidad, aprobadas por el Colegio Académico en la sesión 522,
-			celebrada el 10 de marzo y 17 de abril de 2023, al Reglamento
-			Orgánico (RO).
+			Bienvenido al Sistema de Información de Áreas Académicas y Proyectos
+			de Investigación. Esta plataforma web centraliza la gestión y
+			consulta de nuestra estructura académica, permitiendo a los usuarios
+			explorar de forma ágil y transparente la producción científica de la
+			institución.
 		</p>
 
 		<p>
-			Con el propósito de atender las problemáticas expuestas, en esta
-			reforma se modifica el artículo 3 para precisar que la división y
-			los departamentos les corresponden el desarrollo de las tres
-			funciones y se da una nueva definición al área, llamándola
-			<strong class="highlight-red">área académica</strong>, en cuyo seno
-			se deberán atender la docencia, la investigación y la preservación y
-			difusión de la cultura.
-		</p>
-
-		<p>
-			Además, se indica que este espacio organizativo puede integrarse por
-			personal académico de uno o varios departamentos y divisiones, lo
-			que posibilita la interdisciplinariedad y un enfoque
-			transdisciplinario en la atención de las actividades académicas. Con
-			esta reforma se pretende que la planeación académica se apruebe en
-			los órganos colegiados, fortalecida por el trabajo colectivo de las
-			áreas académicas, al ser armonizada y regulada en los departamentos,
-			las divisiones, así como en las unidades y a nivel institucional.
+			El sistema se organiza jerárquicamente a partir de nuestros cinco
+			departamentos: Ciencias Básicas, Electrónica, Energía, Materiales y
+			Sistemas. Desde aquí, podrás navegar fácilmente por sus respectivas
+			áreas académicas y consultar de manera detallada los proyectos de
+			investigación vinculados a cada una de ellas.
 		</p>
 
 		<!-- <div class="callout-wrapper">
@@ -122,5 +110,9 @@
 		line-height: var(--line-height-normal);
 		margin: 0 !important;
 		text-align: left !important;
+	}
+
+	.hero-spacer {
+		height: var(--space-5);
 	}
 </style>

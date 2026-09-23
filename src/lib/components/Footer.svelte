@@ -12,36 +12,86 @@
 				<p class="contact-line contact-bold">Ing. Cristian Plaza</p>
 				<p class="contact-line">Secretaría Académica CBI-A.</p>
 				<p class="contact-line">Tels. 5318-9003 y 5318-9580</p>
-				<a class="contact-email" href="mailto:asistenciasacacbi@azc.uam.mx">asistenciasacacbi@azc.uam.mx</a>
+				<a
+					class="contact-email"
+					href="mailto:asistenciasacacbi@azc.uam.mx"
+					>asistenciasacacbi@azc.uam.mx</a
+				>
+			</div>
+
+			<!-- SOPORTE TÉCNICO -->
+			<div class="footer-col">
+				<h4 class="footer-heading">SOPORTE TÉCNICO</h4>
+				<p class="contact-line contact-bold">
+					Ing. José Eduardo Hernández de la Cruz
+				</p>
+				<p class="contact-line"></p>
+				<a class="contact-email" href="mailto:soporte.dcbi@azc.uam.mx"
+					>soporte.dcbi@azc.uam.mx</a
+				>
+			</div>
+
+			<!-- DEPARTAMENTOS -->
+			<div class="footer-col">
+				<h4 class="footer-heading">DEPARTAMENTOS</h4>
+				<ul class="footer-links">
+					<li>
+						<a
+							href="https://cienciasbasicas.azc.uam.mx/"
+							target="_blank"
+							rel="noopener noreferrer">Ciencias Básicas</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://zeus.azc.uam.mx/DepElectronicaAZC/index.html"
+							target="_blank"
+							rel="noopener noreferrer">Electrónica</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://energia.azc.uam.mx/en/"
+							target="_blank"
+							rel="noopener noreferrer">Energía</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://materiales.azc.uam.mx/"
+							target="_blank"
+							rel="noopener noreferrer">Materiales</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://sistemas.azc.uam.mx/"
+							target="_blank"
+							rel="noopener noreferrer">Sistemas</a
+						>
+					</li>
+				</ul>
 			</div>
 
 			<!-- LIGAS DE INTERÉS -->
 			<div class="footer-col">
 				<h4 class="footer-heading">LIGAS DE INTERÉS</h4>
 				<ul class="footer-links">
-					<li><a href="https://cga.azc.uam.mx/lenguas-extranjeras/" target="_blank" rel="noopener noreferrer">Lenguas Extranjeras UAM</a></li>
-					<li><a href="https://azc.uam.mx/servicio-social/index" target="_blank" rel="noopener noreferrer">Servicio Social UAM</a></li>
-					<li><a href="https://cdvin.azc.uam.mx/cdvin/bufete/index.php" target="_blank" rel="noopener noreferrer">Bufete de Ingeniería</a></li>
-					<li><a href="https://bolsadetrabajo.uam.mx/" target="_blank" rel="noopener noreferrer">Bolsa Universitaria de Trabajo</a></li>
-				</ul>
-			</div>
-
-			<!-- LIGAS PARA EXTERNOS -->
-			<div class="footer-col">
-				<h4 class="footer-heading">LIGAS PARA EXTERNOS</h4>
-				<ul class="footer-links">
-					<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSft33gdFrW_2Xae7LJ3Dx3LjycftkOdxxKE12WZFZw3MDwhTg/viewform" target="_blank" rel="noopener noreferrer">Cuestionario para Empleadores</a></li>
-					<li><a href="https://www.facebook.com/egresadoscbiuamazc/" target="_blank" rel="noopener noreferrer">Egresados</a></li>
-				</ul>
-			</div>
-
-			<!-- TRANSPARENCIA -->
-			<div class="footer-col">
-				<h4 class="footer-heading">TRANSPARENCIA</h4>
-				<ul class="footer-links">
-					<li><a href="https://transparencia.uam.mx/contraloriasocial/" target="_blank" rel="noopener noreferrer">Contraloría Social</a></li>
-					<li><a href="https://transparencia.uam.mx/" target="_blank" rel="noopener noreferrer">Transparencia de la UAM</a></li>
-					<li><a href="https://azc.uam.mx/site/buzon" target="_blank" rel="noopener noreferrer">Buzón UAM — Quejas y sugerencias</a></li>
+					<li>
+						<a
+							href="https://consejodivcbi.azc.uam.mx/"
+							target="_blank"
+							rel="noopener noreferrer"
+							>Consejo Divisional de CBI</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://consejoacademico.azc.uam.mx/"
+							target="_blank"
+							rel="noopener noreferrer">Consejo Académico</a
+						>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -51,9 +101,17 @@
 
 		<!-- Address bar -->
 		<div class="footer-address">
-			<p class="address-title">Universidad Autónoma Metropolitana — Azcapotzalco</p>
-			<p class="address-line">Av. San Pablo No. 420, Col. Nueva el Rosario, C.P. 02128, Tel. 01 (55) 5318-9000, Alcaldía Azcapotzalco, México, D.F.</p>
-			<p class="address-line">División de Ciencias Básicas e Ingeniería. Edificio HP, 1er. piso, Tel. 01 (55) 5318-9001</p>
+			<p class="address-title">
+				Universidad Autónoma Metropolitana — Azcapotzalco
+			</p>
+			<p class="address-line">
+				Av. San Pablo No. 420, Col. Nueva el Rosario, C.P. 02128, Tel.
+				01 (55) 5318-9000, Alcaldía Azcapotzalco, México, D.F.
+			</p>
+			<p class="address-line">
+				División de Ciencias Básicas e Ingeniería. Edificio HP, 1er.
+				piso, Tel. 01 (55) 5318-9001
+			</p>
 		</div>
 	</div>
 </footer>

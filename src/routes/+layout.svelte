@@ -12,6 +12,7 @@
 		NavItem,
 	} from "$lib";
 	import Footer from "$lib/components/Footer.svelte";
+	import HeroBanner from "$lib/components/HeroBanner.svelte";
 	import { page } from "$app/state";
 	import type { LayoutProps } from "./$types";
 	import { goto } from "$app/navigation";
@@ -57,6 +58,7 @@
 			titleSuffix=""
 		/>
 	</Card>
+	<!-- <HeroBanner subtitle="" /> -->
 {/snippet}
 
 {#snippet sidebarSnippet()}

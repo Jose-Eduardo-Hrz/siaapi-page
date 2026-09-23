@@ -9,3 +9,4 @@ export { default as NavGroup } from "./components/NavGroup.svelte";
 export { default as SidebarNav } from "./components/SidebarNav.svelte";
 export { default as StatusBadge } from "./components/StatusBadge.svelte";
 export { default as ProjectCard } from "./components/ProjectCard.svelte";
+export { default as HeroBanner } from "./components/HeroBanner.svelte";
