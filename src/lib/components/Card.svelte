@@ -14,7 +14,7 @@
 		padding = "md",
 		accentLeft = false,
 		class: className = "",
-		children
+		children,
 	}: Props = $props();
 </script>
 

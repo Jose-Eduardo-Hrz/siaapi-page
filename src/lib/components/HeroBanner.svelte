@@ -10,7 +10,7 @@
 
 	let {
 		topLabel = "UAM AZCAPOTZALCO · DIVISIÓN DE CIENCIAS BÁSICAS E INGENIERÍA",
-		title = "Sistema de Información para la Administración de Proyectos de Investigación",
+		title = "Sistema de Información de Áreas Académicas y Proyectos de Investigación CBI",
 		subtitle = "Plataforma institucional de gestión y consulta de proyectos y áreas académicas de investigación.",
 		backgroundImage = "/fondo.jpeg",
 		class: className = "",

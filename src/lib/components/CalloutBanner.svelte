@@ -6,10 +6,7 @@
 		class?: string;
 	}
 
-	let {
-		children,
-		class: className = ""
-	}: Props = $props();
+	let { children, class: className = "" }: Props = $props();
 </script>
 
 <div class="siaapi-callout-banner {className}">
@@ -22,7 +19,7 @@
 	.siaapi-callout-banner {
 		background-color: var(--color-selection-background);
 		border: var(--border-width-thin) solid var(--color-border-subtle);
-		border-left: var(--accent-border-width) solid var(--color-primary);
+		/* border-left: var(--accent-border-width) solid var(--color-primary); */
 		border-radius: var(--radius-md);
 		padding: var(--space-4);
 		box-sizing: border-box;

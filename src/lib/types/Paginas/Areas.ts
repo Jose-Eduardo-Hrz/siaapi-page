@@ -22,6 +22,10 @@ export interface PIA extends RowDataPacket {
     proyectos: ProyectoRow[];
 }
 
+export interface MiembroRow extends RowDataPacket {
+    nombre: string;
+}
+
 export interface PaginaAreaRow extends RowDataPacket {
     id: number;
     id_departamento: number;
@@ -32,4 +36,5 @@ export interface PaginaAreaRow extends RowDataPacket {
     acuerdo: string;
     responsable: string;
     pias: PIA[];
+    miembros: MiembroRow[] | null;
 }
